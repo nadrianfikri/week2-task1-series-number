@@ -10,7 +10,6 @@ function performEvenNumber() {
     }
   }
 
-  // displayNum.style.height = 'auto';
   displayElm.style.border = '3px solid #9c1515 ';
 
   displayNum.innerHTML = result;
@@ -22,33 +21,34 @@ function performOddNumber() {
       result += `${i}  `;
     }
   }
-  // displayNum.style.height = 'auto';
+ 
   displayElm.style.border = '3px solid #f3ef18 ';
   
   displayNum.innerHTML = result;
 }
 
-function performPrimeNumber() {
-  let result = '';
 
-  function isPrime(num) {
+function isPrime(num) {
     for (let i = 2; i < num; i++) {
       if (num % i === 0) {
         return false;
       }
     }
     return true;
-  }
+}
+
+function performPrimeNumber() {
+  let result = '';
 
   for (let i = 2; i <= numberInput.value; i++) {
     if (isPrime(i)) {
       result += `${i}  `;
     }
   }
-  // displayNum.style.transition = '1s';
-
-  // displayNum.style.height = 'auto';
+ 
   displayElm.style.border = '3px solid #27bd27 ';
 
   displayNum.innerHTML = result;
 }
+
+
